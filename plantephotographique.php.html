@@ -1,0 +1,130 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd"> 
+
+<html>
+
+<title>Jean-christophe Galmiche</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<link rel="stylesheet" type="text/css" href="styles.css">
+
+
+</head>
+
+<body bgcolor="#FFFFFF" onload="black();" >
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-56555092-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+<SCRIPT LANGUAGE="JavaScript">
+var navVersion = navigator.appVersion.substring(0,1);
+if (navVersion >= 3)
+{
+i6360 = new Image;
+i6360 = "planteorange.jpg";
+i6360 = "utilisateurvert.jpg";
+i6360 = "eau.jpg";
+}
+var isNS = (navigator.appName == "Netscape" && parseInt(navigator.appVersion) >= 4);
+var div1 = (isNS) ? document.obj1 : document.all.obj1.style;
+var div2 = (isNS) ? document.obj2 : document.all.obj2.style;
+var div3 = (isNS) ? document.obj3 : document.all.obj3.style;
+var div4 = (isNS) ? document.obj4 : document.all.obj4.style;
+var div5 = (isNS) ? document.obj5 : document.all.obj5.style;
+var objet;
+var coord;
+var coordb = 800;
+objet = new Array(div1,div2,div3,div4,div5)
+coord = new Array()
+function placeObj(i,px,py) {
+ objet[i].left=px;
+ objet[i].top=py;
+}
+function voirObj(i) {
+ objet[i].visibility="visible";
+}
+function cacheObj(i) {
+ objet[i].visibility="hidden";
+}
+var userAgent=navigator.appName + " " + navigator.appVersion;
+var agentInfo=userAgent.substring(0, 12);
+var yBase = 0;
+var xBase = 0;
+var delay = 15;
+var yAmpl = 10;
+var yMax = 40;
+var step = .1;
+var ystep = .5;
+var currStep = 0;
+var tAmpl=1;
+var Xpos = 50;var ox;
+var Ypos = 50;var oy;
+var j = 0;
+if(agentInfo >= "Netscape 4.0") {
+ document.captureEvents(Event.MOUSEMOVE);
+ function mouveA(evnt) {
+  Xpos = evnt.pageX;
+  Ypos = evnt.pageY;
+ }
+ document.onMouseMove = mouveA;
+}
+else {
+ function mouveB() {
+  ofy=document.body.scrollTop;ofx=document.body.scrollLeft;
+  Xpos = event.clientX+ofx;
+  Ypos = event.clientY+ofy;
+ }
+ document.onmousemove = mouveB;
+}
+function animation() {
+ yBase = 160;xBase = 160;
+ var cx;var cy;
+ for ( j = 0 ; j < 5 ; j++ ) {
+  cx=Xpos + Math.sin((20*Math.sin(currStep/20))+j*70)*xBase*(Math.sin(10+currStep/(10+j))+0.2)*Math.cos((currStep + j*25)/10);
+  cy=Ypos + Math.cos((20*Math.sin(currStep/(20+j)))+j*70)*yBase*(Math.sin(10+currStep/10)+0.2)*Math.cos((currStep + j*25)/10);
+  placeObj(j,cx,cy);
+ }
+ currStep += step;
+ setTimeout("animation()", 15);
+}
+animation();
+
+</SCRIPT>
+
+
+<div id="nav"><a href="index.php.html"><span style="font-size: 1.35em;color:#000;">Jean-christophe Galmiche</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="reportages.php.html" id="reportages">reportages</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="plantephotographique.php.html" id="plante ">plante photographique</a>  &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="art.php.html" id="art">divers</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="information.php.html" id="information">information</a></div>
+
+<div id="submenu">
+<a href="description.php.html" id="A">description</a> 
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="plante/plantes/index-page=1&menu=plantes.php.html" id="B">plante</a>  
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp 
+<a href="series.php.html" id="C">s&eacute;ries</a> 
+<br>
+
+<map name="i6360map">
+
+<area shape="poly" coords="392,173,409,97,440,70,459,102,413,130,424,154" href="series.php.html" onMouseOver="i6360.src='eau.jpg'"  
+onMouseOut="i6360.src='logo_photosynthese.jpg'" alt="utilisation"/>
+
+<area shape="poly" coords="472,114,513,162,505,186,433,204,477,255,447,341,394,335,375,286,380,204,428,153,418,136" href="plante/plantes/index-page=1&menu=plantes.php.html" onMouseOver="i6360.src='planteorange.jpg'" 
+onMouseOut="i6360.src='logo_photosynthese.jpg'" alt="plante photographique"/>
+
+<area shape="poly" coords="155,-6,478,-6,433,73,404,96,354,129,327,315,402,343,401,379,220,394"
+href="description.php.html" onMouseOver="i6360.src='utilisateurvert.jpg'" onMouseOut="i6360.src='logo_photosynthese.jpg'" alt="utilisateur"/>
+
+</map>
+
+<div id="logo">
+<img src="logo_photosynthese.jpg" name="i6360" width="800" height="486" border="0" usemap="#i6360map"/>
+</div>
+</body>
+</html>

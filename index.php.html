@@ -1,0 +1,66 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+    "http://www.w3.org/TR/html4/loose.dtd"> 
+<html>
+<head>
+	<title>Jean-christophe Galmiche</title>
+
+<meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
+<meta name="description" content="">
+
+<link rel="stylesheet" type="text/css" href="styles.css" >
+<script src="[http://code.jquery.com/jquery-1.6.1.js]" ></script> 
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180758060-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-180758060-1');
+</script>
+
+
+
+<script>
+function randomImg(){
+   var tabImg = new Array();
+   tabImg[0]  = "1.jpg";
+   tabImg[1]  = "2.jpg";
+   tabImg[2]  = "3.jpg";
+   tabImg[3]  = "4.jpg";
+   tabImg[4]  = "5.jpg";
+   tabImg[5]  = "6.jpg";
+   tabImg[6]  = "7.jpg";
+   tabImg[7]  = "8.jpg";
+   tabImg[8]  = "9.jpg";
+   tabImg[9]  = "10.jpg";
+   tabImg[10]  = "11.jpg";
+   tabImg[11]  = "12.jpg";
+
+   document.getElementById('content').src += tabImg[Math.round(Math.random()*11)];
+}
+</script>
+</head>
+<body>
+
+
+<script type="text/javascript" > 
+
+$('body').css("margin-top","-1000000px"); 
+$('body').prepend("<div id='wait' style='position:absolute;width:220px;top:40%;left:40%;text-align:center;font-weight:bold;' >Chargement en cours . . .<br/><img src='chargement.gif' ></img></div>"); 
+
+function body_ready(){$('body').css('margin-top','');$('#wait').css('display','none');} 
+$(document).ready(function(){body_ready();});
+
+</script> 
+
+<div id="nav"><a href="index.php.html"><span style="font-size: 1.35em;color:#000;">Jean-christophe Galmiche</span></a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="reportages.php.html" id="reportages">reportages</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="plantephotographique.php.html" id="plante ">plante photographique</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="art.php.html" id="art">divers</a> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp <a href="information.php.html" id="info">information</a></div>
+<br><br>
+
+<body onload="randomImg()">
+   <img src="intro300/" id="content" />
+</body>
+
+</body>
+</html>
