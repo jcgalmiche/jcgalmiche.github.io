@@ -1,6 +1,6 @@
 Options +FollowSymlinks
 RewriteEngine On
 RewriteCond %{HTTP_REFERER} !^$
-RewriteCond %{HTTP_REFERER} !^http://(www.)?plantephotographique.com/ [nc]
-RewriteRule .*.(gif|jpg|png)$ http://www.plantephotographique.com/images/images-de-substitution.jpg [nc]
+RewriteCond %{HTTP_REFERER} !^http://(www.)?jcgalmiche.com.com/ [nc]
+RewriteRule .*.(gif|jpg|png)$ http://www.jcgalmiche.com/images/images-de-substitution.jpg [nc]
 Options All -Indexes
