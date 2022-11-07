@@ -2,6 +2,40 @@
     "http://www.w3.org/TR/html4/loose.dtd"> 
 <html>
 <head>
+
+<title>Cookies</title>
+
+    <script src="tarteaucitron/tarteaucitron.js"></script>
+    <script>
+        tarteaucitron.init({
+            "privacyUrl": "", /* URL de la page de la politique de vie privée */
+
+            "hashtag": "#tarteaucitron", /* Ouvrir le panneau contenant ce hashtag */
+            "cookieName": "tarteaucitron", /* Nom du Cookie */
+
+            "orientation": "middle", /* Position de la bannière (top - bottom) */
+            "showAlertSmall": true, /* Voir la bannière réduite en bas à droite */
+            "cookieslist": true, /* Voir la liste des cookies */
+
+            "adblocker": false, /* Voir une alerte si un bloqueur de publicités est détecté */
+            "AcceptAllCta": true, /* Voir le bouton accepter tout (quand highPrivacy est à true) */
+            "highPrivacy": true, /* Désactiver le consentement automatique */
+            "handleBrowserDNTRequest": false, /* Si la protection du suivi du navigateur est activée, tout interdire */
+
+            "removeCredit": false, /* Retirer le lien vers tarteaucitron.js */
+            "moreInfoLink": true, /* Afficher le lien "voir plus d'infos" */
+            "useExternalCss": false, /* Si false, tarteaucitron.css sera chargé */
+
+            //"cookieDomain": ".my-multisite-domaine.fr", /* Cookie multisite */
+
+            "readmoreLink": "/cookiespolicy" /* Lien vers la page "Lire plus" */
+        });
+
+        tarteaucitron.user.multiplegtagUa = ['UA-180758060-1', 'UA-180758060-1', 'UA-180758060-1'];
+        (tarteaucitron.job = tarteaucitron.job || []).push('multiplegtag');
+
+  </script>
+
 	<title>Jean-christophe Galmiche</title>
 
 <meta http-equiv="Content-Type" content="text/html; charset=us-ascii">
@@ -9,18 +43,6 @@
 
 <link rel="stylesheet" type="text/css" href="styles.css" >
 <script src="[http://code.jquery.com/jquery-1.6.1.js]" ></script> 
-
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180758060-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-180758060-1');
-</script>
-
-
 
 <script>
 function randomImg(){
